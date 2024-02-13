@@ -1,12 +1,12 @@
+import "./Navbar.scss"
+
 export default function Navbar(){
     return (
         <nav>
-            <img src="/logo.png" ></img>
+            <img className="logo" src="/logo.png" ></img>
             <a>Shop</a>
-            <img src="/shopping-cart.png"></img>
-            <img src="/search.png"></img>
-
-
+            <img className="icon" src="/search.png"></img>
+            <img className="icon" src="/shopping-cart.png"></img>
         </nav>
 
 
