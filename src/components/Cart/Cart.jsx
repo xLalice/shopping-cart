@@ -1,15 +1,23 @@
 import Quantity from "../Quantity/Quantity"
+import Shop from "../Shop./Shop"
+import { Link } from "react-router-dom"
+import "./Cart.scss"
 
 export default function Cart(props){
     const itemList = (
         props.cart.map(item => {
             return (
                 <div className="cart-item" key={item.uniqueId}>
-                    <img src={item.img} />
+                    <div className="img-container">
+                        <img src={item.img} />
+                    </div>
                     <h2>{item.name}</h2>
-                    <h2>${item.price}</h2>
-                    <Quantity id={item.uniqueId} value={item.quantity} changeQuantity={props.changeQuantity}/>
-                    <button>Remove</button>
+                    <div className="control">
+                        <h2>${item.price}</h2>
+                        <Quantity id={item.uniqueId} value={item.quantity} changeQuantity={props.changeQuantity}/>
+                        <button onClick={() => props.removeFromCart(item.uniqueId)}>Remove</button>
+                    </div>
+                   
                 </div>
             )
         })
@@ -24,12 +32,25 @@ export default function Cart(props){
         return acc + (quantity * price);
     }, 0);
 
+    const noItem = (
+        <div className="message">
+            <h1>Your cart is empty</h1>
+            <button><Link to="shop">Shop Now</Link></button>
+        </div>
+    )
+
     return (
-        <div>
-            <h2>Shopping Cart</h2>
-            <h2>{props.cart.length} items</h2>
-            {itemList}
-            <h2>{totalPrice}</h2>
+        <div className="cart">
+           { props.cart.length === 0 
+           ? noItem
+           : (<>
+                <h2>Shopping Cart</h2>
+                <h2>{props.cart.length} items</h2>
+                {itemList}
+                <h2>Total Price: ${totalPrice}</h2>
+                </>)
+            }
+
         </div>
         
 

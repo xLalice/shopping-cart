@@ -18,7 +18,7 @@ export default function Card(props){
     return (
         <div className="card">
             <div className="image-container">
-                <img src={props.url} />
+                <img className="card-img" src={props.url} />
             </div>
             <h2 className="name">{props.name}</h2>
             <div className="review">

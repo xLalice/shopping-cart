@@ -2,15 +2,15 @@
     display: flex;
     justify-content: center;
 
-    button, input {
+    & > button, input {
         padding: .5em;
     }
 
-    button {
+    & > button {
         font-weight: 900;
     }
 
-    input {
+    & > input {
         text-align: center;
         width: 3em;
         font-weight: bold;

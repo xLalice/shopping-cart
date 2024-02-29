@@ -13,6 +13,10 @@ function App() {
 		setCart(prevCart => [...prevCart, product]);
 	}
 
+	function removeFromCart(id){
+		setCart(prevCart => prevCart.filter(item => item.uniqueId !== id))
+	}
+
 	function changeQuantity(id, action) {
 		setCart(prevCart =>
 			prevCart.map(product => {
@@ -49,6 +53,7 @@ function App() {
 							<Cart
 								cart={cart}
 								changeQuantity={changeQuantity}
+								removeFromCart={removeFromCart}
 							/>
 						}
 					/>
