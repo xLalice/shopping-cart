@@ -1,0 +1,18 @@
+.quantity-button {
+    display: flex;
+    justify-content: center;
+
+    button, input {
+        padding: .5em;
+    }
+
+    button {
+        font-weight: 900;
+    }
+
+    input {
+        text-align: center;
+        width: 3em;
+        font-weight: bold;
+    }
+}
