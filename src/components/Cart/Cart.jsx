@@ -35,7 +35,7 @@ export default function Cart(props){
     const noItem = (
         <div className="message">
             <h1>Your cart is empty</h1>
-            <button><Link to="shop">Shop Now</Link></button>
+            <button><Link to="/shop">Shop Now</Link></button>
         </div>
     )
 
