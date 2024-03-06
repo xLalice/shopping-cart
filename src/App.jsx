@@ -31,6 +31,10 @@ function App() {
 		);
 	}
 
+	function checkout(){
+		setCart([]);
+	}
+
 	return (
 		<>
 			<BrowserRouter basename="/">
@@ -54,6 +58,7 @@ function App() {
 								cart={cart}
 								changeQuantity={changeQuantity}
 								removeFromCart={removeFromCart}
+								checkout={checkout}
 							/>
 						}
 					/>

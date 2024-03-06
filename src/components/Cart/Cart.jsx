@@ -44,8 +44,11 @@ export default function Cart(props){
            { props.cart.length === 0 
            ? noItem
            : (<>
-                <h2>Shopping Cart</h2>
-                <h2>{props.cart.length} items</h2>
+                <div className="heading">
+                    <button onClick={props.checkout} className="checkout">Checkout</button>
+                    <h2>{props.cart.length} items</h2>
+                </div>
+                
                 {itemList}
                 <h2>Total Price: ${totalPrice}</h2>
                 </>)
