@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Home.scss";
+import { Link } from "react-router-dom";
 
 export default function Home(){
 
@@ -16,7 +17,7 @@ export default function Home(){
         <>
             <header>
                 <h1>necessary & complementary</h1>
-                <button>Shop Now</button>
+                <button><Link to="shop">Shop Now</Link></button>
             </header>
 
         </>

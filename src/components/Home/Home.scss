@@ -25,5 +25,10 @@ header {
         border: none;
         color: white;
         font-size: 1rem;
+
+        & > a {
+            color: white;
+            text-decoration: none;
+        }
     }
 }

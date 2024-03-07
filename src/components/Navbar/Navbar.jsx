@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { Outlet } from "react-router-dom";
-import { useThemeProps } from "@mui/material";
 
 
 export default function Navbar(props){
